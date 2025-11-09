@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .hero-pattern {
+        background-image: linear-gradient(to right bottom, rgba(249, 115, 22, 0.9), rgba(251, 146, 60, 0.9)), url('https://placehold.co/1920x1080/fdba74/f97316?text=Vibrant+Cityscape');
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Keyframe animations for a premium feel */
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Utility classes for animations */
+      .animate-fade-in {
+        animation: fade-in 0.8s ease-out forwards;
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.8s ease-out forwards;
+      }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-500 { animation-delay: 500ms; }
