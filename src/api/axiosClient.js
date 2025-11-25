@@ -6,10 +6,11 @@ const TOKEN_KEY = 'auth_token'
 const axiosClient = axios.create({
   baseURL: API_BASE_URL,
   withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json',
-  },
 })
+
+// Default JSON Content-Type will be set automatically by axios when sending JSON bodies.
+// We avoid forcing a global Content-Type so multipart/form-data requests can let the
+// browser set the proper boundary header.
 
 export function setAuthToken(token) {
   if (token) {

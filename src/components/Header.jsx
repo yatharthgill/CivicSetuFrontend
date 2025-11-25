@@ -37,11 +37,14 @@ export default function Header() {
 
         <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center gap-4 text-sm">
-            <a href="#how-it-works" className="text-gray-700 hover:text-orange-600 transition cursor-pointer">How It Works</a>
-            
-            <a href="#features" className="text-gray-700 hover:text-orange-600 transition cursor-pointer">Features</a>
-            
-            <a href="#admin" className="text-gray-700 hover:text-orange-600 transition cursor-pointer">Admin Portal</a>
+                  <Link to="/" className="font-semibold text-xl">Reports</Link>
+      <nav className="flex gap-3 items-center">
+        <Link to="/reports/create" className="text-sm">Create</Link>
+        <Link to="/reports/my-reports" className="text-sm">My Reports</Link>
+        <Link to="/reports/nearby" className="text-sm">Nearby</Link>
+        <Link to="/dashboard" className="text-sm">Dashboard</Link>
+        <Link to="/admin" className="text-sm text-red-600">Admin</Link>
+      </nav>
           </div>
 
           {loading ? (

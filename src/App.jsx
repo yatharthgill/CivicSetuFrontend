@@ -10,6 +10,11 @@ import Dashboard from './pages/Dashboard.jsx'
 import Profile from './pages/Profile.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 import Footer from './components/Footer.jsx'
+import CreateReport from './pages/Report/CreateReport.jsx'
+import MyReports from './pages/Report/MyReports.jsx'
+import NearbyReports from './pages/Report/NearbyReports.jsx'
+import ReportDetails from './pages/Report/ReportDetails.jsx'
+import AdminPanel from './pages/Admin/AdminPanel.jsx'
 
 function App() {
   return (
@@ -25,6 +30,17 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+
+
+          <Route path="/" element={<Home/>} />
+          <Route path="/reports/create" element={<CreateReport/>} />
+          <Route path="/reports/my-reports" element={<MyReports/>} />
+          <Route path="/reports/nearby" element={<NearbyReports/>} />
+          <Route path="/reports/:reportId" element={<ReportDetails/>} />
+
+          {/* Admin/Dashboard */}
+          {/* {/* <Route path="/dashboard" element={<Dashboard/>} /> */}
+          <Route path="/admin" element={<AdminPanel/>} /> 
         </Routes>
       </main>
 
